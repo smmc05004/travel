@@ -1,11 +1,17 @@
 // SPA의 index.html과 같은 역할
 // 단, react lifecycle, data fetching 불가
-import Document, { Head, Main, NextScript, Html } from "next/document";
+import Document, {
+  Head,
+  Main,
+  NextScript,
+  Html,
+  DocumentContext,
+} from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
 export default class RootDocument extends Document {
   // styled-components 설정
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
