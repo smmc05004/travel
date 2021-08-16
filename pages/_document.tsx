@@ -41,17 +41,7 @@ export default class RootDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta charSet="utf-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
-          />
-          <meta name="description" content="Dev.log" />
-          <meta
-            name="keywords"
-            content="blog,react,antd,webpack,css,javascript"
-          />
-          <link rel="manifest" href="/manifest.json" />
+          {/* <link rel="manifest" href="/manifest.json" /> */}
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css"
