@@ -1,4 +1,8 @@
-const AddBtn = ({ onClick }) => {
+interface Props {
+  onClick: () => void;
+}
+
+const AddBtn = ({ onClick }: Props) => {
   return (
     <div>
       <button type="button" onClick={onClick}>

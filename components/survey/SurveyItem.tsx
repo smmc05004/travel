@@ -1,6 +1,24 @@
 import SingleSelect from "./types/SingleSelect";
 
-const SurveyItem = ({ surveyObj, handleAddOption }) => {
+interface OptionProps {
+  optionId: number;
+  text: string;
+}
+
+interface SurveyProps {
+  type: number;
+  id: number;
+  options: OptionProps[];
+}
+
+interface Props {
+  surveyObj: SurveyProps;
+  handleAddOption: (
+    e: React.MouseEvent<HTMLButtonElement>,
+    surveyId: number
+  ) => void;
+}
+const SurveyItem = ({ surveyObj, handleAddOption }: Props) => {
   return (
     <div>
       <SingleSelect

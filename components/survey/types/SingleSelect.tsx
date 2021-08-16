@@ -1,15 +1,29 @@
 import { useRef } from "react";
 import RadioOption from "./RadioOption";
 
-const SingleSelect = ({ surveyId, options, handleAddOption }) => {
+interface OptionProps {
+  optionId: number;
+  text: string;
+}
+
+interface Props {
+  surveyId: number;
+  options: OptionProps[];
+  handleAddOption: (
+    e: React.MouseEvent<HTMLButtonElement>,
+    surveyId: number
+  ) => void;
+}
+
+const SingleSelect = ({ surveyId, options, handleAddOption }: Props) => {
   const optionId = useRef(0);
 
   const optionList = options.map((optionObj) => {
     console.log("optionObj: ", optionObj);
     return (
       <RadioOption
-        key={optionObj.id}
-        ids={optionObj.id}
+        key={optionObj.optionId}
+        ids={optionObj.optionId}
         text={optionObj.text}
       />
     );

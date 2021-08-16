@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Survey from ".";
 import AddBtn from "../../components/survey/common/AddBtn";
 import SurveyList from "../../components/survey/SurveyList";
@@ -38,7 +38,10 @@ const Register = () => {
     setSurvey(newSurveyArr);
   };
 
-  const handleAddOption = (e, surveyId) => {
+  const handleAddOption = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    surveyId: number
+  ) => {
     const filteredSurveyArr = survey.filter((surveyObj) => {
       return surveyObj.id === surveyId;
     });
