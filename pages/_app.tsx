@@ -4,12 +4,14 @@ import Layout from "../components/layout/Layout";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import Head from "next/head";
+import wrapper from "../store";
+import { FC } from "react";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
 `;
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <Layout>
       <Head>
@@ -30,5 +32,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
     </Layout>
   );
-}
-export default MyApp;
+};
+
+export default wrapper.withRedux(MyApp);
