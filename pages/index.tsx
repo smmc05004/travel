@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import testSlice from "../reducers/test";
 const MainWrapper = styled.div`
   width: 100%;
   max-width: 1200px;
@@ -12,9 +11,7 @@ const MainWrapper = styled.div`
 const Home: NextPage = () => {
   const dispatch = useDispatch();
 
-  const onClick = () => {
-    dispatch(testSlice.actions.REQUEST_ADD_CNT());
-  };
+  const onClick = () => {};
 
   return (
     <MainWrapper>
