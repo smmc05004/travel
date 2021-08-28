@@ -1,11 +1,13 @@
+import { ReactElement } from "react";
+
 interface Props {
-  onClick: () => void;
+  addQuestion: () => void;
 }
 
-const AddBtn = ({ onClick }: Props) => {
+const AddBtn = ({ addQuestion }: Props): ReactElement => {
   return (
     <div>
-      <button type="button" onClick={onClick}>
+      <button type="button" onClick={addQuestion}>
         추가
       </button>
     </div>
